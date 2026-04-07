@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using YogaInstructor.Api.Data;
+using Scalar.AspNetCore;
+using YogaInstructor.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +13,13 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+app.MapYogaClassEndpoints();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();

@@ -9,7 +9,7 @@
         // The translated fields
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public string ScientificBenefits { get; set; } = string.Empty;
+        //public string ScientificBenefits { get; set; } = string.Empty;
 
         // Navigation Property (Tells .Net these two are linked)
         public YogaClass? YogaClass { get; set; }

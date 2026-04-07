@@ -17,5 +17,8 @@
 
         public decimal Price { get; set; }
         public DateTime CreatedAt { get; set;  } = DateTime.UtcNow;
+
+        // The below line tell .Net that one yoga class can have many translations
+        public ICollection<YogaClassTranslation> YogaClassTranslations { get; set; } = new List<YogaClassTranslation>();
     }
 }
